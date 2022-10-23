@@ -1,0 +1,49 @@
+WARNING: ERROR! List is deleted. Couldn't delete|Fri Oct  7 22:43:04 2022
+WARNING: ERROR! Enter correct point of menu|Fri Oct  7 22:43:47 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:49 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:51 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:52 2022
+WARNING: ERROR! Enter correct point of menu|Fri Oct  7 22:43:53 2022
+WARNING: ERROR! Invalid index. Select correct index|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:55 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:43:58 2022
+WARNING: ERROR! Enter only one symbol|Fri Oct  7 22:44:01 2022
+WARNING: ERROR! Invalid symbol when deleting by value|Fri Oct  7 22:44:04 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:44:07 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:44:07 2022
+WARNING: ERROR! String was entered. Enter only digit.|Fri Oct  7 22:44:07 2022
