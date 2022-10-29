@@ -14,54 +14,37 @@
 using namespace BinarySearchTree;
 using namespace std;
 
-const int pointsOfMenu = 6;
+const int pointsOfMenu = 15;
 
-void loadTree(std::any &param){
+
+void addToTree(any &param) {
     auto *bt = any_cast<BinaryTree *>(param);
+    std::cout << "Введите симво для добавления:";
+    char _data;
+    std::cin >> _data;
+    bt->insert(_data);
+    std::cout << "Элемент успешно добавлен!" << std::endl;
+}
+
+void SaveData(string file_name, BinaryTree *bt) {
     fstream file;
     string s;
-    file.open("Input.txt");
+    char symbols[255];
+    file.open(file_name);
     while (getline(file, s)){
-        bt->insert(s);
+        strcpy(symbols, s.c_str());
+        for (int i = 0; i < s.length(); ++i) {
+            bt->insert(symbols[i]);
+        }
     }
     file.close();
 }
 
-void addToTree(any &param){
+void PrintTree(any &param) {
     auto *bt = any_cast<BinaryTree *>(param);
-    std::cout << "Пожалуйста, введите новое слово  --> ";
-    std::string _data;
-    std::cin >> _data;
-    bt->insert(_data);
-    std::cout << "Слово успешно добавлено!\n";
-}
-
-void SaveData(string file_name, BinaryTree *bt) {
-    ofstream file;
-    string s;
-    file.open(file_name, std::ios::out);
-    s = bt->clearTree(s);
-    file << s;
-    file.close();
-}
-
-void PrintTree(any &param){
-    auto *bt = any_cast<BinaryTree *>(param);
-    if (bt->getCountElement() == 0) cout << "Словарь пуст.\n";
-    else if (bt->getCountElement() > 20) {
-        cout
-                << "Количество слов в словаре превышает 20. Отображение может быть некорректным.\nВы уверены, что хотите распечатать словарь?\n1) Да\n0) Вернуться назад\n==> ";
-        int ind{};
-        cin >> ind;
-        switch (ind) {
-            case 1:
-                bt->Printing(10);
-            case 0:
-                break;
-            default:
-                break;
-        }
-    } else {
+    if (bt->getCountElement() == 0) {
+        cout << "В дереве нет элементов"<<endl;
+    }else {
         bt->Printing(10);
     }
 }
@@ -69,44 +52,84 @@ void PrintTree(any &param){
 void getCountWord(any &param) {
     auto *bt = any_cast<BinaryTree *>(param);
     if (bt->getCountElement() != 0) {
-        cout << "Количество слов в словаре: " << bt->getCountElement() << " слов.\n";
+        cout << "В дереве : " << bt->getCountElement() << " слов.\n";
     } else {
-        cout << "Словарь пуст";
+        cout << "В дереве нет элементов";
     }
 }
 
-void ext(any& param) {
+void ext(any &param) {
     auto *bt = any_cast<BinaryTree *>(param);
-    cout << "Выполняется сохранение данных в выходной файл";
-    SaveData("Output.txt", bt);
     exit(0);
 }
 
 void clearTree(any &param) {
     auto *bt = any_cast<BinaryTree *>(param);
-    bt->clearTree("");
-    cout << "Очистка словаря завершена.\n";
+    char s{};
+    bt->clearTree(s);
+    cout << "Дерево очищено"<<endl;
 }
 
-//void deleteEl(any &param) {
-//    auto *bt = any_cast<BinaryTree *>(param);
-//    std::cout << "Пожалуйста, введите слово для удаления  --> ";
-//    std::string _data;
-//    std::cin >> _data;
-//    //нужно допилить!
-//    bt->deleteEl(_data);
-//    std::cout << "Слово успешно удалено!\n";
-//}
+void deleteEl(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->deleteItem();
+}
+
+void LPK_print(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->LPK_printing();
+}
+
+void LKP_print(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->LKP_printing();
+}
+
+void KLP_print(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->KLP_printing();
+}
+
+void checkMin(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->checkMinElement();
+}
+
+void checkMax(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->checkMaxElement();
+}
+
+void findInTree(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->findValue();
+}
+
+void personalEx(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->deleteVowels();
+}
+
+void fileOutput(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    bt->writeInFile();
+}
+
+void fileInput(any &param) {
+    auto *bt = any_cast<BinaryTree *>(param);
+    char s{};
+    bt->clearTree(s);
+    bt->readFromFile();
+}
 
 
+string Errors::file_name = "Errors.txt";
 
-string Errors::file_name="Errors.txt";
 
-
-int main(int argc, char* argv[]) {
-    std::string load_data_file = "Input.txt";
-    std::string write_data_file = "Output.txt";
-    std::string log_data_file = "Errors.txt";
+int main(int argc, char *argv[]) {
+    std::string load_data_file = "/home/neekostar/CLionProjects/TaDS_LAB2/Input.txt";
+    std::string write_data_file = "/home/neekostar/CLionProjects/TaDS_LAB2/Output.txt";
+    std::string log_data_file = "/home/neekostar/CLionProjects/TaDS_LAB2/Errors.txt";
     if (argc >= 3) {
         load_data_file = argv[1];
         write_data_file = argv[2];
@@ -115,23 +138,35 @@ int main(int argc, char* argv[]) {
     Errors::setFileName(log_data_file);
 
     BinaryTree *tree = new BinaryTree;
+    SaveData(load_data_file, tree);
+
 
     MyMenuItem items[pointsOfMenu]{
             MyMenuItem{"Добавить элемент в дерево", addToTree},
-            MyMenuItem{"Распеччатать дерево", PrintTree},
-            MyMenuItem{"Количество элементов", getCountWord},
-            MyMenuItem{"Очистить", clearTree},
-            MyMenuItem{"Добавить в файл", loadTree},
+            MyMenuItem{"Распечатать дерево", PrintTree},
+            MyMenuItem{"Количество элементов в дереве", getCountWord},
+            MyMenuItem{"Очистить дерево", clearTree},
+            MyMenuItem{"Обратный обход", LPK_print},
+            MyMenuItem{"Симметричный обход", LKP_print},
+            MyMenuItem{"Прямой обход обход", KLP_print},
+            MyMenuItem{"Минимальный элемент дерева", checkMin},
+            MyMenuItem{"Максимальный элемент дерева", checkMax},
+            MyMenuItem{"Поиск элемента в дереве", findInTree},
+            MyMenuItem{"Удаление элемента по ключу", deleteEl},
+            MyMenuItem{"Удаление гласных букв из дерева", personalEx},
+            MyMenuItem{"Запись дерева в файл", fileOutput},
+            MyMenuItem{"Чтение дерева из файла", fileInput},
             MyMenuItem{"Выход из программы", ext}
     };
     MyMenu menu("Меню бинарного дерева", items, pointsOfMenu);
     any param = tree;
-    while (true){
+    while (true) {
         try {
             menu.runCommand(param);
         }
-        catch (const Errors &ex){
-            cout<<"Error: "<<ex.getError()<<endl;
+        catch (const Errors &ex) {
+            cout << "Error: " << ex.getError() << endl;
+            menu.runCommand(param);
         }
     }
     return 0;

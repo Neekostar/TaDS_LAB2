@@ -3,49 +3,35 @@
 //
 #ifndef LAB2_BINARY_SEARCH_TREE_H
 #define LAB2_BINARY_SEARCH_TREE_H
+
 #include <string>
 
 namespace BinarySearchTree {
     struct Node {
-        std::string data;
+        char data;
         Node *left, *right;
-        bool state= false;
+        bool state = false;
     };
 
     class BinaryTree {
     private:
-//        Node *head, *tail;
-//
-        int countElement{}; //вспомогательный метод определения длины списка
-        Node* root;
+        int countElement{};
+        Node *root;
         bool empty = true;
-        std::string DestroyNode(Node* node, std::string out);
-//        bool isUniqueValueInsert(Node *temp, const int checking_value);
-//
-//        void DeleteBinaryTree(Node **temp); // удаление всех узлов из дерева
-//
-//        int GetCountNodes(Node *temp); // подсчет узлов дерева
-//
-//        int GetCountLeaves(Node *temp); // подсчет узлов-листьев дерева
+        char DestroyNode(Node *node, char out);
+
     public:
-//        BinaryTree();
-//
-//        ~BinaryTree();
-        Node *addElem(Node *tr, std::string x);
+        Node *addElem(Node *tr, char x);
 
         void PrintTree(Node *tr, int n);
-
-        void PrintLevel(Node *tr, int level);
-
-        bool CheckForEmpty(Node *&tr);
 
         Node *getMinimum(Node *tr);
 
         Node *getMaximum(Node *tr);
 
-        Node *delElem(Node *tr, std::string x);
+        Node *delElem(Node *tr, char x);
 
-        Node *findElem(Node *tr, std::string x);
+        Node *findElem(Node *tr, char x);
 
         Node *delTree(Node *tr);
 
@@ -55,17 +41,41 @@ namespace BinarySearchTree {
 
         void LPK(Node *&temp); // обратный обход дерева
 
-//        void outputFile(Node *tr, int n);
-//
-//        void inputFromFile(Node *tr);
+        void insert(char _data);
 
-        void insert(std::string _data);
+        Node *insertNode(Node *root, char data);
 
-        Node *insertNode(Node *_root, std::string _data);
-        std::string clearTree(std::string out);
+        char clearTree(char out);
+
         void Printing(int n);
+
         void printNode(Node *t, int n);
+
         int getCountElement() const;
+
+        void LPK_printing();
+
+        void LKP_printing();
+
+        void KLP_printing();
+
+        void checkMinElement();
+
+        void checkMaxElement();
+
+        void findValue();
+
+        void deleteItem();
+
+        void deleteVowels();
+
+        void InfoFileOutput(Node *tr);
+
+        void writeInFile();
+
+        void InfoFileInput(BinarySearchTree::Node *tr);
+
+        void readFromFile();
 
     };
 

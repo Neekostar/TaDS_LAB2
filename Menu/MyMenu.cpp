@@ -21,7 +21,7 @@ namespace BinarySearchTree {
     void MyMenu::runCommand(std::any &param) {
         cout << "\n";
         print();
-        cout << "\nSelect ==> ";
+        cout << "\nВыберите пункт меню: ";
         cin >> m_select;
         if (m_select > m_count || m_select <= 0) {
             throw Errors{"Wrong index command in menu"};
